@@ -33,6 +33,5 @@ task copySources(type: Copy) {
 task bundleSources(type: Zip, dependsOn: copySources) {
     baseName = 'sources'
     destinationDir = file('build')
-
     from 'build/out'
 }
