@@ -23,17 +23,19 @@ Exercises:
 
 */
 
-task hello(type: HelloTask)
+task hello(type: HelloTask) 
 
 class HelloTask extends DefaultTask {
+    def info = 'Hello World'
+
     @TaskAction
     void doAction() {
-        println 'Hello World'
+        logger.info '***start***' 
+        logger.lifecycle info
+        logger.info '***end***'
     }
 }
 
-/*
 task derpy << {
     primp "Herp de derp"
 }
-*/
