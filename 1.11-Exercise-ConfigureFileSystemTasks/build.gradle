@@ -36,7 +36,7 @@ task copyWeb(type: Copy) {
     into './build'
 }
 
-task bundleWeb(type: Zip) {
+task bundleWeb(type: Zip, dependsOn: copyWeb) {
     baseName = 'web'
     destinationDir = file('./build')
     from './build/web'
