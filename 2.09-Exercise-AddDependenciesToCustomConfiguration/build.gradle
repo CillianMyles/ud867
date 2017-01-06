@@ -42,4 +42,5 @@ task zipDeps(type: Zip) {
     version "4.2"
     baseName "Foo"
     classifier "SNAPSHOT" 
+    from configurations.deps
 }
